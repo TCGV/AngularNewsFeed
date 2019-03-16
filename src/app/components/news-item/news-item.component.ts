@@ -26,4 +26,8 @@ export class NewsItemComponent implements OnInit {
     this.img = this.newsDto.img;
   }
 
+  click() {
+    // transition to news details page
+  }
+
 }

@@ -1,4 +1,16 @@
-<h4>{{title}}</h4>
-<img alt="" src="{{img}}" />
-<p>{{summary}}</p>
+<div class="container" (click)="click()">
 
+    <button mat-icon-button [matMenuTriggerFor]="appMenu">
+        <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #appMenu="matMenu">
+        <button mat-menu-item>Not interested</button>
+        <button mat-menu-item>Flag</button>
+    </mat-menu>
+
+    <h4>{{title}}</h4>
+
+    <img alt="" src="{{img}}" />
+    <p>{{summary}}</p>
+
+</div>

@@ -3,14 +3,14 @@
 
   <!-- This fills the remaining space of the current row -->
   <span class="fill-remaining-space"></span>
-
+  
+  <button mat-icon-button [matMenuTriggerFor]="appMenu">
+    <mat-icon>more_horiz</mat-icon>
+  </button>
   <mat-menu #appMenu="matMenu">
     <button mat-menu-item>Sources</button>
     <button mat-menu-item>Settings</button>
     <button mat-menu-item>Help</button>
   </mat-menu>
-  
-  <button mat-icon-button [matMenuTriggerFor]="appMenu">
-    <mat-icon>more_horiz</mat-icon>
-  </button>
+
 </mat-toolbar>

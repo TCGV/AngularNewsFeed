@@ -1,0 +1,21 @@
+.container {
+    overflow: hidden;
+    margin: 5px 0 10px 0;
+}
+
+.mat-icon-button {
+    float: right;
+}
+
+h4 {
+    margin: 8px 0;
+}
+
+img {
+    float: right;
+    margin: 0 0 4px 10px;
+}
+
+p {
+    text-align: justify;
+}
