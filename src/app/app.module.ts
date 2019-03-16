@@ -9,6 +9,7 @@ import { AppComponent } from './components/app/app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FeedComponent } from './components/feed/feed.component';
 import { NewsItemComponent } from './components/news-item/news-item.component';
+import { NewsDetailsComponent } from './components/news-details/news-details.component';
 
 import { NewsService } from './services/news.service';
 
@@ -17,7 +18,8 @@ import { NewsService } from './services/news.service';
       AppComponent,
       HeaderComponent,
       FeedComponent,
-      NewsItemComponent
+      NewsItemComponent,
+      NewsDetailsComponent
    ],
    imports: [
       BrowserModule,

@@ -1,6 +1,6 @@
 <div class="container" (click)="click()">
 
-    <button mat-icon-button [matMenuTriggerFor]="appMenu">
+    <button mat-icon-button [matMenuTriggerFor]="appMenu" (click)="$event.stopPropagation()">
         <mat-icon>more_vert</mat-icon>
     </button>
     <mat-menu #appMenu="matMenu">

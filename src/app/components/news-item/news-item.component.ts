@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { NewsItemDto } from '../../interfaces/NewsItemDto';
 
 @Component({
@@ -7,6 +8,7 @@ import { NewsItemDto } from '../../interfaces/NewsItemDto';
   styleUrls: ['./news-item.component.css']
 })
 export class NewsItemComponent implements OnInit {
+  id:string;
   date:string;
   title:string;
   summary:string;
@@ -16,9 +18,10 @@ export class NewsItemComponent implements OnInit {
   @Input()
   public newsDto:NewsItemDto;
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit() {
+    this.id = this.newsDto.id;
     this.date = this.newsDto.date;
     this.title = this.newsDto.title;
     this.summary = this.newsDto.summary;
@@ -27,7 +30,7 @@ export class NewsItemComponent implements OnInit {
   }
 
   click() {
-    // transition to news details page
+    this.router.navigate(['news', this.id]);
   }
 
 }
