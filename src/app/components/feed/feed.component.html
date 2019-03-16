@@ -1,0 +1,3 @@
+<div class="container">
+    <app-news-item *ngFor="let item of items; index as i; trackBy: trackByFn" [newsDto]="item"></app-news-item>
+</div>
