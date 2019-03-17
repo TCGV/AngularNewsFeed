@@ -2,7 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import { NewsService } from '../../services/news.service';
+import { ToolbarService } from '../../services/toolbar.service';
+
 import { NewsItemDto } from '../../interfaces/NewsItemDto';
+import { ToolbarType } from '../../enums/toolbar-type.enum';
 
 @Component({
   selector: 'app-news-details',
@@ -17,7 +20,9 @@ export class NewsDetailsComponent implements OnInit {
   link:string;
   img:string;
 
-  constructor(private route:ActivatedRoute, private newsService:NewsService) { }
+  constructor(private route:ActivatedRoute, private newsService:NewsService, private toolbarService:ToolbarService) {
+    this.toolbarService.setToolbarType(ToolbarType.NewsDetails);
+  }
 
   ngOnInit() {
     this.route.params.subscribe(params => {

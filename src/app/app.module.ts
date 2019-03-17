@@ -12,6 +12,7 @@ import { NewsItemComponent } from './components/news-item/news-item.component';
 import { NewsDetailsComponent } from './components/news-details/news-details.component';
 
 import { NewsService } from './services/news.service';
+import { ToolbarService } from './services/toolbar.service';
 
 @NgModule({
    declarations: [
@@ -27,7 +28,10 @@ import { NewsService } from './services/news.service';
       BrowserAnimationsModule,
       MaterialModule
    ],
-   providers: [NewsService],
+   providers: [
+      NewsService,
+      ToolbarService
+   ],
    bootstrap: [
       AppComponent
    ]
