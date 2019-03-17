@@ -1,0 +1,35 @@
+.container {
+    padding: 8px 15px;
+}
+
+h4 {
+    text-align: center;
+}
+
+img {
+    margin: 0 auto;
+    display: block;
+}
+
+p {
+    text-align: justify;
+}
+
+.button-row {
+    position: relative;
+    margin-top: 40px;
+}
+
+button {
+    width: 49%;
+    height: 50px;
+    text-transform: uppercase;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}

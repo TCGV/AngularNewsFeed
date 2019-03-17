@@ -10,9 +10,7 @@ import { NewsItemDto } from '../../interfaces/NewsItemDto';
 export class FeedComponent implements OnInit {
   items:NewsItemDto[];
 
-  constructor(private newsService:NewsService) {
-
-  }
+  constructor(private newsService:NewsService) { }
 
   ngOnInit() {
     this.items = this.newsService.getItems();

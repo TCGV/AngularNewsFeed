@@ -3,11 +3,11 @@ import { NewsItemDto } from '../interfaces/NewsItemDto';
 
 @Injectable()
 export class NewsService {
+    private newsFeed:NewsItemDto[];
+    private newsMap:Map<string,NewsItemDto>;
 
-    constructor() { }
-
-    getItems() {
-        return [{
+    constructor() {
+        this.newsFeed = [{
             id: '1234567890',
             date: '2016-05-02T17:25:25-03:00',
             title: 'Sucateamento do SUS? A ameaça de corte no gasto obrigatório com saúde',
@@ -36,5 +36,18 @@ export class NewsService {
             link: 'http://www.bbc.com/portuguese/geral/2016/05/160516_indonesia_cobra_lab',
             img: 'http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/05/16/160516135836_danca_144x81_bbc_nocredit.jpg'
         }] as NewsItemDto[];
+
+        this.newsMap = new Map<string,NewsItemDto>();
+        this.newsFeed.forEach(element => {
+            this.newsMap.set(element.id, element);
+        });
+    }
+
+    getItem(id:string) {
+        return this.newsMap.get(id);
+    }
+
+    getItems() {
+        return this.newsFeed;
     }
 }
