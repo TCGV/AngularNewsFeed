@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
-import { NewsItemDto } from '../../interfaces/NewsItemDto';
+import { NewsItemDto } from '../../interfaces/news-item-dto';
 
 @Component({
   selector: 'app-news-item',

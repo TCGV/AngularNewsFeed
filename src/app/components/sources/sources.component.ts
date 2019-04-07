@@ -5,7 +5,7 @@ import { ToolbarService } from '../../services/toolbar.service';
 import { SourcesService } from '../../services/sources.service';
 
 import { ToolbarType } from '../../enums/toolbar-type.enum';
-import { SourceDto } from '../../interfaces/SourceDto';
+import { SourceDto } from '../../interfaces/source-dto';
 
 @Component({
   selector: 'app-sources',

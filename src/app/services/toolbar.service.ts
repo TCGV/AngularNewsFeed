@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 import { ToolbarType } from '../enums/toolbar-type.enum';
 
-import { ToolbarConfig } from '../interfaces/ToolbarConfig';
+import { ToolbarConfig } from '../interfaces/toolbar-config';
 import { trigger } from '@angular/animations';
 
 @Injectable()

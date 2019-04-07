@@ -4,7 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { NewsService } from '../../services/news.service';
 import { ToolbarService } from '../../services/toolbar.service';
 
-import { NewsItemDto } from '../../interfaces/NewsItemDto';
+import { NewsItemDto } from '../../interfaces/news-item-dto';
 import { ToolbarType } from '../../enums/toolbar-type.enum';
 
 @Component({

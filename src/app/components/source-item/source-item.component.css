@@ -3,3 +3,14 @@
     margin: 5px 0 10px 0;
     cursor: pointer;
 }
+
+img {
+    float: left;
+    max-height: 32px;
+    margin: 3px 10px 3px 0;
+}
+
+span.url {
+    color: darkgray;
+    font-size: 0.8em;
+}

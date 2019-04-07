@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { NewsItemDto } from '../interfaces/NewsItemDto';
+import { NewsItemDto } from '../interfaces/news-item-dto';
 
 @Injectable()
 export class NewsService {
