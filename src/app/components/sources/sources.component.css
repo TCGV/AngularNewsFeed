@@ -1,0 +1,9 @@
+.container {
+    padding: 8px 15px;
+}
+
+.add-source {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}

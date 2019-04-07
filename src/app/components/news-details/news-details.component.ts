@@ -21,7 +21,8 @@ export class NewsDetailsComponent implements OnInit {
   img:string;
 
   constructor(private route:ActivatedRoute, private newsService:NewsService, private toolbarService:ToolbarService) {
-    this.toolbarService.setToolbarType(ToolbarType.NewsDetails);
+    this.toolbarService.setTitle('');
+    this.toolbarService.setToolbarType(ToolbarType.Back);
   }
 
   ngOnInit() {

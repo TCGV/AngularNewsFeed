@@ -1,4 +1,4 @@
-<mat-toolbar color="primary"  *ngIf="toolbarType == ToolbarType.Feed">
+<mat-toolbar color="primary"  *ngIf="toolbarType == ToolbarType.Main">
 
   <span>NewsFeed</span>
 
@@ -8,17 +8,19 @@
     <mat-icon>more_horiz</mat-icon>
   </button>
   <mat-menu #appMenu="matMenu">
-    <button mat-menu-item>Sources</button>
-    <button mat-menu-item>Settings</button>
-    <button mat-menu-item>Help</button>
+    <button mat-menu-item (click)="sources()"><mat-icon>rss_feed</mat-icon> Sources</button>
+    <button mat-menu-item (click)="settings()"><mat-icon>settings</mat-icon> Settings</button>
+    <button mat-menu-item (click)="about()"><mat-icon>help_outline</mat-icon> About</button>
   </mat-menu>
 
 </mat-toolbar>
 
-<mat-toolbar color="primary" *ngIf="toolbarType == ToolbarType.NewsDetails">
+<mat-toolbar color="primary" *ngIf="toolbarType == ToolbarType.Back">
 
     <button mat-icon-button (click)="back()">
         <mat-icon>arrow_back</mat-icon>
     </button>
+
+    <span class="title">{{title}}</span>
   
   </mat-toolbar>

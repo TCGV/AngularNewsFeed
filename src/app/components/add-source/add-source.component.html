@@ -1,0 +1,12 @@
+
+<form (ngSubmit)="onSubmit()" #sourceForm="ngForm">
+
+  <mat-form-field appearance="standard">
+    <mat-label>Source URL</mat-label>
+    <input matInput id="url" required [(ngModel)]="url" name="url">
+    <mat-hint>ex: https://feeds.folha.uol.com.br/emcimadahora/rss091.xml</mat-hint>
+  </mat-form-field>
+
+  <button type="submit" mat-raised-button [disabled]="!sourceForm.form.valid">Submit</button>
+
+</form>

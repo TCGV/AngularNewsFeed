@@ -4,13 +4,14 @@
         <mat-icon>more_vert</mat-icon>
     </button>
     <mat-menu #appMenu="matMenu">
-        <button mat-menu-item>Not interested</button>
-        <button mat-menu-item>Flag</button>
+            <button mat-menu-item (click)="bookmark()"><mat-icon>bookmark_border</mat-icon>Read later</button>
+            <button mat-menu-item (click)="notInterested()"><mat-icon>not_interested</mat-icon>Not interested</button>
+        <button mat-menu-item (click)="flag()"><mat-icon>flag</mat-icon> Flag</button>
     </mat-menu>
 
-    <h4>{{title}}</h4>
+    <h4>{{newsDto.title}}</h4>
 
-    <img alt="" src="{{img}}" />
-    <p>{{summary}}</p>
+    <img alt="" src="{{newsDto.img}}" />
+    <p>{{newsDto.summary}}</p>
 
 </div>

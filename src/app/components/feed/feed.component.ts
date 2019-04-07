@@ -15,7 +15,7 @@ export class FeedComponent implements OnInit {
   items:NewsItemDto[];
 
   constructor(private newsService:NewsService, private toolbarService:ToolbarService) {
-    this.toolbarService.setToolbarType(ToolbarType.Feed);
+    this.toolbarService.setToolbarType(ToolbarType.Main);
   }
 
   ngOnInit() {

@@ -8,12 +8,6 @@ import { NewsItemDto } from '../../interfaces/NewsItemDto';
   styleUrls: ['./news-item.component.css']
 })
 export class NewsItemComponent implements OnInit {
-  id:string;
-  date:string;
-  title:string;
-  summary:string;
-  link:string;
-  img:string;
 
   @Input()
   public newsDto:NewsItemDto;
@@ -21,16 +15,22 @@ export class NewsItemComponent implements OnInit {
   constructor(private router:Router) { }
 
   ngOnInit() {
-    this.id = this.newsDto.id;
-    this.date = this.newsDto.date;
-    this.title = this.newsDto.title;
-    this.summary = this.newsDto.summary;
-    this.link = this.newsDto.link;
-    this.img = this.newsDto.img;
   }
 
   click() {
-    this.router.navigate(['news', this.id]);
+    this.router.navigate(['news', this.newsDto.id]);
+  }
+
+  bookmark() {
+    console.log('bookmark:' + this.newsDto.id);
+  }
+
+  notInterested() {
+    console.log('notInterested:' + this.newsDto.id);
+  }
+
+  flag() {
+    console.log('flag:' + this.newsDto.id);
   }
 
 }

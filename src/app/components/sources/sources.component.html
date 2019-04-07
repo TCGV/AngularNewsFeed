@@ -1,0 +1,9 @@
+<div class="container">
+
+    <button mat-fab class="add-source" color="baisc" (click)="addSource()"><mat-icon>add</mat-icon></button>
+
+    <div class="container">
+        <app-source-item *ngFor="let source of sources; index as i; trackBy: trackByFn" [sourceDto]="source"></app-source-item>
+    </div>
+
+</div>
