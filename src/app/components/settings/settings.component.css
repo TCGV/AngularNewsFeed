@@ -1,0 +1,19 @@
+.container {
+    padding: 15px;
+}
+
+mat-form-field{
+    width: 100%;
+}
+
+.about {
+    text-align: center;
+    margin-top: 80px;
+}
+
+button.sync {
+    width: 49%;
+    height: 50px;
+    margin: 40px auto;
+    display: block;
+}

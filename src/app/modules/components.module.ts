@@ -10,6 +10,7 @@ import { FeedComponent } from '../components/feed/feed.component';
 import { NewsDetailsComponent } from '../components/news-details/news-details.component';
 import { SourcesComponent } from '../components/sources/sources.component';
 import { AddSourceComponent } from '../components/add-source/add-source.component';
+import { SettingsComponent } from '../components/settings/settings.component';
 
 /* Components */
 import { HeaderComponent } from '../components/header/header.component';
@@ -22,6 +23,7 @@ var _components = [
   NewsDetailsComponent,
   SourcesComponent,
   AddSourceComponent,
+  SettingsComponent,
 
   HeaderComponent,
   NewsItemComponent,

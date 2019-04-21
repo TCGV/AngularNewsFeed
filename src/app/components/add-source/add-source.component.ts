@@ -1,10 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 
-import { ToolbarService } from '../../services/toolbar.service';
-import { SourcesService } from '../../services/sources.service';
-
-import { ToolbarType } from '../../enums/toolbar-type.enum';
+import { ToolbarService, SourcesService, ToolbarType } from '../../modules/services.module';
 
 @Component({
   selector: 'app-add-source',

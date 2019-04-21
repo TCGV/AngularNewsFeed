@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
-import { NewsItemDto } from '../../interfaces/news-item-dto';
+
+import { NewsItemDto } from '../../modules/services.module';
 
 @Component({
   selector: 'app-news-item',
@@ -27,10 +28,6 @@ export class NewsItemComponent implements OnInit {
 
   notInterested() {
     console.log('notInterested:' + this.newsDto.id);
-  }
-
-  flag() {
-    console.log('flag:' + this.newsDto.id);
   }
 
 }

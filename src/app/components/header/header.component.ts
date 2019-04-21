@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Location } from '@angular/common';
 
-import { ToolbarService } from '../../services/toolbar.service';
-import { ToolbarType } from '../../enums/toolbar-type.enum';
+import { ToolbarService, ToolbarType } from '../../modules/services.module';
 
 @Component({
   selector: 'app-header',
@@ -31,10 +30,6 @@ export class HeaderComponent implements OnInit {
 
   settings() {
     this.router.navigate(['settings']);
-  }
-
-  about() {
-    this.router.navigate(['about']);
   }
 
   back() {

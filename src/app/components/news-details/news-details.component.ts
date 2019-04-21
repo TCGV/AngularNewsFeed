@@ -1,11 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import { NewsService } from '../../services/news.service';
-import { ToolbarService } from '../../services/toolbar.service';
-
-import { NewsItemDto } from '../../interfaces/news-item-dto';
-import { ToolbarType } from '../../enums/toolbar-type.enum';
+import { NewsService, ToolbarService, NewsItemDto, ToolbarType } from '../../modules/services.module';
 
 @Component({
   selector: 'app-news-details',

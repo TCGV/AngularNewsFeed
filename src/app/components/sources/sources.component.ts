@@ -1,11 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { ToolbarService } from '../../services/toolbar.service';
-import { SourcesService } from '../../services/sources.service';
-
-import { ToolbarType } from '../../enums/toolbar-type.enum';
-import { SourceDto } from '../../interfaces/source-dto';
+import { ToolbarService, SourcesService, ToolbarType, SourceDto } from '../../modules/services.module';
 
 @Component({
   selector: 'app-sources',

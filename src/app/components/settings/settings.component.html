@@ -1,0 +1,40 @@
+<div class="container">
+
+  <p>
+    <mat-slide-toggle color="primary" (change)=change() [(ngModel)]="enableNotifications">Habilitar notificações</mat-slide-toggle>
+  </p>
+  
+  <p>
+    <mat-form-field>
+      <mat-label>Feed Ordering</mat-label>
+      <mat-select (selectionChange)=change() [(ngModel)]="feedOrdering">
+        <mat-option value="{{FeedOrdering.Popular}}">Popular</mat-option>
+        <mat-option value="{{FeedOrdering.Newest}}">Newest</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </p>
+  
+  <p>
+    <mat-form-field>
+      <mat-label>Font Size</mat-label>
+      <mat-select (selectionChange)=change() [(ngModel)]="fontSize">
+        <mat-option value="8">8</mat-option>
+        <mat-option value="10">10</mat-option>
+        <mat-option value="11">11</mat-option>
+        <mat-option value="12">12 - Default</mat-option>
+        <mat-option value="14">14</mat-option>
+        <mat-option value="16">16</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </p>
+
+  <p>
+    <button class="sync" mat-raised-button>Syncrhonize</button>
+  </p>
+
+  <div class="about">
+    <p>NewsFeed © {{getYear()}}</p>
+    <p>Version {{getVersion()}}</p>
+  </div>
+
+</div>

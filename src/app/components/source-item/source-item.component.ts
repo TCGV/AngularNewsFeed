@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { SourceDto } from '../../interfaces/source-dto';
+import { SourceDto } from '../../modules/services.module';
 
 @Component({
   selector: 'app-source-item',
