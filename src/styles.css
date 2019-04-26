@@ -4,5 +4,9 @@
 
 body {
     margin: 0;
+}
+
+body,
+.mat-tab-group {
     font-family: 'Lato', sans-serif;
 }

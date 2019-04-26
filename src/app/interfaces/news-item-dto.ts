@@ -5,4 +5,6 @@ export interface NewsItemDto {
     summary:string,
     link:string,
     img:string
+    bookmarked:boolean,
+    notInterested:boolean
 }

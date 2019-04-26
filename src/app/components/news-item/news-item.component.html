@@ -4,8 +4,9 @@
         <mat-icon>more_vert</mat-icon>
     </button>
     <mat-menu #appMenu="matMenu">
-        <button mat-menu-item (click)="bookmark()"><mat-icon>bookmark_border</mat-icon>Read later</button>
-        <button mat-menu-item (click)="notInterested()"><mat-icon>not_interested</mat-icon>Not interested</button>
+        <button *ngIf="!newsDto.bookmarked" mat-menu-item (click)="setBookmark()"><mat-icon>bookmark_border</mat-icon>Read later</button>
+        <button *ngIf="newsDto.bookmarked" mat-menu-item (click)="clearBookmark()"><mat-icon>bookmark</mat-icon>Remove bookmark</button>
+        <button mat-menu-item (click)="setNotInterested()"><mat-icon>not_interested</mat-icon>Not interested</button>
     </mat-menu>
 
     <h4>{{newsDto.title}}</h4>

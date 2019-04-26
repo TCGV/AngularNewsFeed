@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { NewsItemDto } from '../../modules/services.module';
+import { NewsService, NewsItemDto } from '../../modules/services.module';
 
 @Component({
   selector: 'app-news-item',
@@ -13,7 +13,7 @@ export class NewsItemComponent implements OnInit {
   @Input()
   public newsDto:NewsItemDto;
 
-  constructor(private router:Router) { }
+  constructor(private router:Router, private newsService:NewsService) { }
 
   ngOnInit() {
   }
@@ -22,12 +22,16 @@ export class NewsItemComponent implements OnInit {
     this.router.navigate(['news', this.newsDto.id]);
   }
 
-  bookmark() {
-    console.log('bookmark:' + this.newsDto.id);
+  setBookmark() {
+    this.newsService.setBookmark(this.newsDto.id, true);
   }
 
-  notInterested() {
-    console.log('notInterested:' + this.newsDto.id);
+  clearBookmark() {
+    this.newsService.setBookmark(this.newsDto.id, false);
+  }
+
+  setNotInterested() {
+    this.newsService.setNotInterested(this.newsDto.id, true);
   }
 
 }

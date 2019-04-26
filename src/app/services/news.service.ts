@@ -1,12 +1,16 @@
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter } from '@angular/core';
+
 import { NewsItemDto } from '../interfaces/news-item-dto';
+import { FeedFilter } from '../enums/feed-filter.enum';
 
 @Injectable()
 export class NewsService {
     private newsFeed:NewsItemDto[];
     private newsMap:Map<string,NewsItemDto>;
+    private itemChangedEvent:EventEmitter<NewsItemDto>;
 
     constructor() {
+        this.itemChangedEvent = new EventEmitter<NewsItemDto>();
         this.newsFeed = [{
             id: '1234567890',
             date: '2016-05-02T17:25:25-03:00',
@@ -47,7 +51,31 @@ export class NewsService {
         return this.newsMap.get(id);
     }
 
-    getItems() {
-        return this.newsFeed;
+    getItems(filter:FeedFilter) {
+        return this.newsFeed.filter(
+            n => filter == FeedFilter.All ? true :
+                filter == FeedFilter.Bookmarked ? n.bookmarked :
+                false
+        );
+    }
+
+    subscribeToItemChange(generatorOrNext?: any) {
+        this.itemChangedEvent.subscribe(generatorOrNext);
+    }
+
+    setBookmark(id:string, b:boolean) {
+        var n = this.newsMap.get(id);
+        if (n != undefined) {
+            n.bookmarked = b;
+            this.itemChangedEvent.emit(n);
+        }
+    }
+
+    setNotInterested(id:string, b:boolean) {
+        var n = this.newsMap.get(id);
+        if (n != undefined) {
+            n.notInterested = b;
+            this.itemChangedEvent.emit(n);
+        }
     }
 }

@@ -1,3 +1,25 @@
 <div class="container">
-    <app-news-item *ngFor="let item of items; index as i; trackBy: trackByFn" [newsDto]="item"></app-news-item>
+
+    <mat-tab-group mat-align-tabs="center">
+
+        <mat-tab label="All">
+            <div class="news-items-list">
+                <app-news-item *ngFor="let item of allItems; index as i; trackBy: trackByFn" [newsDto]="item"></app-news-item>
+                <div *ngIf="allItems.length == 0">
+                    <h4>Failed to retrieve news feed</h4>
+                </div>
+            </div>
+        </mat-tab>
+
+        <mat-tab label="Bookmarked">
+            <div class="news-items-list">
+                <app-news-item *ngFor="let item of bookmarkedItems; index as i; trackBy: trackByFn" [newsDto]="item"></app-news-item>
+                <div *ngIf="bookmarkedItems.length == 0">
+                    <h4>Your bookmarked news feed is empty</h4>
+                </div>
+            </div>
+        </mat-tab>
+
+    </mat-tab-group>
+
 </div>

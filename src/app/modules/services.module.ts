@@ -9,6 +9,7 @@ export * from '../services/toolbar.service';
 export * from '../services/sources.service';
 
 export * from '../enums/toolbar-type.enum';
+export * from '../enums/feed-filter.enum';
 export * from '../enums/feed-ordering.enum';
 
 export * from '../interfaces/news-item-dto';
